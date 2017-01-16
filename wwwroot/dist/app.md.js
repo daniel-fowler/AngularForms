@@ -16,7 +16,6 @@ var textbox_cmp_1 = require("./components/textbox/textbox.cmp");
 var form_cmp_1 = require("./components/form/form.cmp");
 var text_cmp_1 = require("./components/text/text.cmp");
 var word_count_pipe_1 = require("./pipes/word-count.pipe");
-var test_cmp_1 = require("./components/test.cmp");
 var AppMD = (function () {
     function AppMD() {
     }
@@ -28,15 +27,11 @@ AppMD = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule
         ],
-        exports: [
-            test_cmp_1.TestCMP
-        ],
         declarations: [
             app_cmp_1.AppCMP,
             textbox_cmp_1.TextboxCMP,
             form_cmp_1.FormCMP,
             text_cmp_1.TextCMP,
-            test_cmp_1.TestCMP,
             word_count_pipe_1.WordCountPipe
         ],
         bootstrap: [
