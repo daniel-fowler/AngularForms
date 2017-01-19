@@ -14,8 +14,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 var core_1 = require("@angular/core");
 var btn_multi_cmp_1 = require("../btn-multi/btn-multi.cmp");
 var btn_html_1 = require("./btn.html");
+var formModel_1 = require("../form/formModel");
 var BtnCMP = (function () {
-    function BtnCMP(btnMulti) {
+    function BtnCMP(formModel, btnMulti) {
+        this.formModel = formModel;
         this.btnMulti = btnMulti;
         this.onClicked = this.click;
         this.value = null;
@@ -115,7 +117,8 @@ BtnCMP = __decorate([
         selector: 'btn',
         template: btn_html_1.html
     }),
-    __param(0, core_1.Optional()),
-    __metadata("design:paramtypes", [btn_multi_cmp_1.BtnMultiCMP])
+    __param(1, core_1.Optional()),
+    __metadata("design:paramtypes", [formModel_1.FormModel,
+        btn_multi_cmp_1.BtnMultiCMP])
 ], BtnCMP);
 exports.BtnCMP = BtnCMP;

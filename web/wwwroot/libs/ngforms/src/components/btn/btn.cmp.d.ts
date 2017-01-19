@@ -1,7 +1,9 @@
 import { BtnMultiCMP } from '../btn-multi/btn-multi.cmp';
+import { FormModel } from '../form/formModel';
 export declare class BtnCMP {
+    formModel: FormModel;
     protected btnMulti: BtnMultiCMP;
-    constructor(btnMulti?: BtnMultiCMP);
+    constructor(formModel: FormModel, btnMulti?: BtnMultiCMP);
     readonly test: string;
     onClicked: () => void;
     value: any;

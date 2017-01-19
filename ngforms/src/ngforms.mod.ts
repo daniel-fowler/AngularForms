@@ -5,7 +5,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {
     TextboxCMP,
     FormCMP,
-    TextCMP
+    TextCMP,
+    BtnCMP,
+    BtnMultiCMP
 } from './components/core';
 
 import {
@@ -21,6 +23,8 @@ import {
         TextboxCMP,
         FormCMP,
         TextCMP,
+        BtnCMP,
+        BtnMultiCMP,
 
         WordCountPipe
     ],
@@ -28,6 +32,8 @@ import {
         TextboxCMP,
         FormCMP,
         TextCMP,
+        BtnCMP,
+        BtnMultiCMP,
 
         WordCountPipe
     ]

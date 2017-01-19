@@ -10,8 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var btn_multi_html_1 = require("./btn-multi.html");
+var formModel_1 = require("../form/formModel");
 var BtnMultiCMP = (function () {
-    function BtnMultiCMP() {
+    function BtnMultiCMP(formModel) {
+        this.formModel = formModel;
         this.label = null;
         this.value = null;
         this.valueChange = new core_1.EventEmitter();
@@ -59,6 +61,6 @@ BtnMultiCMP = __decorate([
         selector: 'btn-multi',
         template: btn_multi_html_1.html
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [formModel_1.FormModel])
 ], BtnMultiCMP);
 exports.BtnMultiCMP = BtnMultiCMP;

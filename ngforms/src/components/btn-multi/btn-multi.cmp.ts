@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output, Input} from '@angular/core';
 import {html} from './btn-multi.html';
+import {FormModel} from '../form/formModel';
 
 @Component({
     selector: 'btn-multi',
@@ -7,6 +8,9 @@ import {html} from './btn-multi.html';
 })
 
 export class BtnMultiCMP {
+    constructor(public formModel:FormModel)
+    {
+    }
 
     @Input() label: string = null;
 

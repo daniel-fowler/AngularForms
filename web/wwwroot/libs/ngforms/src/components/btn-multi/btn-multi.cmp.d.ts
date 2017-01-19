@@ -1,5 +1,8 @@
 import { EventEmitter } from '@angular/core';
+import { FormModel } from '../form/formModel';
 export declare class BtnMultiCMP {
+    formModel: FormModel;
+    constructor(formModel: FormModel);
     label: string;
     value: any;
     valueChange: EventEmitter<any>;

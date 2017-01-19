@@ -2,6 +2,7 @@ import {Component, Input, HostBinding, HostListener, Optional} from '@angular/co
 
 import {BtnMultiCMP} from '../btn-multi/btn-multi.cmp';
 import {html} from './btn.html';
+import {FormModel} from '../form/formModel';
 
 @Component({
     selector: 'btn',
@@ -9,7 +10,8 @@ import {html} from './btn.html';
 })
 
 export class BtnCMP {
-    constructor(@Optional() protected btnMulti?: BtnMultiCMP) {
+    constructor(public formModel:FormModel,
+                @Optional() protected btnMulti?: BtnMultiCMP) {
     }
 
     @HostBinding('class') get test() { return 'btn ' + this.class }

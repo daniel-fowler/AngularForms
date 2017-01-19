@@ -28,12 +28,16 @@ NGFormsModule = __decorate([
             core_2.TextboxCMP,
             core_2.FormCMP,
             core_2.TextCMP,
+            core_2.BtnCMP,
+            core_2.BtnMultiCMP,
             core_3.WordCountPipe
         ],
         declarations: [
             core_2.TextboxCMP,
             core_2.FormCMP,
             core_2.TextCMP,
+            core_2.BtnCMP,
+            core_2.BtnMultiCMP,
             core_3.WordCountPipe
         ]
     }),
