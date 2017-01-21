@@ -2,6 +2,7 @@ NGForms is a simple litle library for angular 2 that allows you to write html fo
 
 ## Example
 
+```
 <ngform class="form-horizontal"
         class-label="col-lg-2"
         class-control="col-lg-10">
@@ -18,3 +19,4 @@ NGForms is a simple litle library for angular 2 that allows you to write html fo
         <btn [value]="false">No</btn>
     </btn-multi>                
 </ngform>    
+```
