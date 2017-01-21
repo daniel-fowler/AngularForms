@@ -7,7 +7,8 @@ import {
     FormCMP,
     TextCMP,
     BtnCMP,
-    BtnMultiCMP
+    BtnMultiCMP,
+    CheckboxCMP
 } from './components/core';
 
 import {
@@ -25,6 +26,7 @@ import {
         TextCMP,
         BtnCMP,
         BtnMultiCMP,
+        CheckboxCMP,
 
         WordCountPipe
     ],
@@ -34,6 +36,7 @@ import {
         TextCMP,
         BtnCMP,
         BtnMultiCMP,
+        CheckboxCMP,
 
         WordCountPipe
     ]

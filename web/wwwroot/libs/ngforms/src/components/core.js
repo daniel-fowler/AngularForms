@@ -7,3 +7,4 @@ __export(require("./btn-multi/btn-multi.cmp"));
 __export(require("./ngform/ngform.cmp"));
 __export(require("./text/text.cmp"));
 __export(require("./textbox/textbox.cmp"));
+__export(require("./checkbox/checkbox.cmp"));

@@ -15,7 +15,25 @@
                 <btn-multi label="Btn Multi">
                     <btn [value]="true">Yes</btn>
                     <btn [value]="false">No</btn>
-                </btn-multi>                
+                </btn-multi>
+
+                <text label="Checkbox">
+                    <checkbox label="Orange"
+                              value="Orange"
+                              [selected]="fruit">
+                    </checkbox>              
+
+                    <br/>
+                    
+                    <checkbox label="Apple"
+                              value="Apple"
+                              [selected]="fruit">
+                    </checkbox>
+
+                    <br/>
+                    
+                    {{ fruit | json }}
+                </text>
             </ngform>    
         </div>
     </div>
