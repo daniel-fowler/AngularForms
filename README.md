@@ -1,4 +1,4 @@
-NGForms is a simple little library for angular 2 that allows you to write HTML forms without the verbose HTML of bootstrap.
+NGForms is a simple little angular 2 module that allows you to write HTML forms without the verbosity of bootstrap 3.
 
 ## Example
 
