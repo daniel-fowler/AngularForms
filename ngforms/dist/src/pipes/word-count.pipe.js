@@ -9,29 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var formModel_1 = require("../ngform/formModel");
-var text_html_1 = require("./text.html");
-var TextCMP = (function () {
-    function TextCMP(formModel) {
-        this.formModel = formModel;
-        this.label = null;
-        this.value = null;
+var WordCountPipe = (function () {
+    function WordCountPipe() {
     }
-    return TextCMP;
+    WordCountPipe.prototype.transform = function (value) {
+        if (!value)
+            return 0;
+        var result = value.replace(' ', '');
+        var regex = /\s+/gi;
+        var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+        return wordCount;
+    };
+    return WordCountPipe;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], TextCMP.prototype, "label", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], TextCMP.prototype, "value", void 0);
-TextCMP = __decorate([
-    core_1.Component({
-        selector: 'text',
-        template: text_html_1.html
+WordCountPipe = __decorate([
+    core_1.Pipe({
+        name: 'wordCount'
     }),
-    __metadata("design:paramtypes", [formModel_1.FormModel])
-], TextCMP);
-exports.TextCMP = TextCMP;
+    __metadata("design:paramtypes", [])
+], WordCountPipe);
+exports.WordCountPipe = WordCountPipe;

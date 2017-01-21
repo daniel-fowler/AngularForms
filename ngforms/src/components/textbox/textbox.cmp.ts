@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {FormModel} from '../form/formModel';
+import {FormModel} from '../ngform/formModel';
 import {html} from './textbox.html';
 
 @Component({

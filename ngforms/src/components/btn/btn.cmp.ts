@@ -2,7 +2,7 @@ import {Component, Input, HostBinding, HostListener, Optional} from '@angular/co
 
 import {BtnMultiCMP} from '../btn-multi/btn-multi.cmp';
 import {html} from './btn.html';
-import {FormModel} from '../form/formModel';
+import {FormModel} from '../ngform/formModel';
 
 @Component({
     selector: 'btn',

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output, Input} from '@angular/core';
 import {html} from './btn-multi.html';
-import {FormModel} from '../form/formModel';
+import {FormModel} from '../ngform/formModel';
 
 @Component({
     selector: 'btn-multi',

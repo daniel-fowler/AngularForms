@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {FormModel} from '../form/formModel';
+import {FormModel} from '../ngform/formModel';
 import {html} from './text.html';
 
 @Component({

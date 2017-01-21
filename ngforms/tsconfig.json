@@ -9,7 +9,7 @@
         "removeComments": false,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
-        "outDir": "../web/wwwroot/libs/ngforms",
+        "outDir": "dist",
         "declaration": true
     },
     "exclude":[

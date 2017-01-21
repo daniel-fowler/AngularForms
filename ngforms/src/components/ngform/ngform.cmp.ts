@@ -2,7 +2,7 @@ import {Component, HostBinding, ElementRef, Input} from '@angular/core';
 import {FormModel} from './formModel';
 
 @Component({
-    selector: 'form',
+    selector: 'ngform',
     template: '<ng-content></ng-content>',
     providers: [
         FormModel

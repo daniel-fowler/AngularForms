@@ -49,7 +49,7 @@ __decorate([
 ], FormCMP.prototype, "classControl", null);
 FormCMP = __decorate([
     core_1.Component({
-        selector: 'form',
+        selector: 'ngform',
         template: '<ng-content></ng-content>',
         providers: [
             formModel_1.FormModel
