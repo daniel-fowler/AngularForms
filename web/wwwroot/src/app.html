@@ -1,3 +1,5 @@
+<h1>Example</h1>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 form-horizontal">
@@ -5,34 +7,34 @@
                     class-label="col-lg-2"
                     class-control="col-lg-10">
  
-                <textbox label="Texbox"></textbox>
+                <textbox label="Texbox"
+                         [(value)]="textbox"></textbox>
+                <text label=" ">{{ textbox }}</text>
  
                 <textbox label="Textbox Multiline"
-                         [multiline]="true"></textbox>
+                         [multiline]="true"
+                         [(value)]="textboxmulti"></textbox>
+                <text label=" ">{{textboxmulti}}</text> 
  
                 <text label="Text">Some text here.</text>
 
-                <btn-multi label="Btn Multi">
+                <btn-multi label="Btn Multi"
+                           [(value)]="yesno">
                     <btn [value]="true">Yes</btn>
                     <btn [value]="false">No</btn>
                 </btn-multi>
+                <text label=" ">{{ yesno | json }}</text>
+                
 
                 <text label="Checkbox">
-                    <checkbox label="Orange"
-                              value="Orange"
-                              [selected]="fruit">
-                    </checkbox>              
-
-                    <br/>
+                    <div *ngFor="let item of fruit">
+                        <checkbox [label]="item"
+                                  [value]="item"
+                                  [selected]="selectedFruit">
+                        </checkbox>              
+                    </div>
                     
-                    <checkbox label="Apple"
-                              value="Apple"
-                              [selected]="fruit">
-                    </checkbox>
-
-                    <br/>
-                    
-                    {{ fruit | json }}
+                    {{ selectedFruit | json }}
                 </text>
             </ngform>    
         </div>

@@ -6,5 +6,6 @@ import {Component} from '@angular/core';
 })
 export class AppCMP
 {
-    fruit:string[] = ['Orange'];
+    fruit:string[] = ['Orange', 'Apple'];
+    selectedFruit:string[] = [ 'Orange' ];
 }
