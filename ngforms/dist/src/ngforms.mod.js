@@ -9,29 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
-var app_cmp_1 = require("./app.cmp");
-var ngforms_1 = require("../libs/ngforms");
-var AppMD = (function () {
-    function AppMD() {
+var platform_browser_1 = require("@angular/platform-browser");
+var core_2 = require("./components/core");
+var core_3 = require("./pipes/core");
+var NGFormsModule = (function () {
+    function NGFormsModule() {
     }
-    return AppMD;
+    return NGFormsModule;
 }());
-AppMD = __decorate([
+NGFormsModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            ngforms_1.NGFormsModule
+            forms_1.FormsModule
+        ],
+        exports: [
+            core_2.TextboxCMP,
+            core_2.FormCMP,
+            core_2.TextCMP,
+            core_2.BtnCMP,
+            core_2.BtnMultiCMP,
+            core_2.CheckboxCMP,
+            core_3.WordCountPipe
         ],
         declarations: [
-            app_cmp_1.AppCMP
-        ],
-        bootstrap: [
-            app_cmp_1.AppCMP
+            core_2.TextboxCMP,
+            core_2.FormCMP,
+            core_2.TextCMP,
+            core_2.BtnCMP,
+            core_2.BtnMultiCMP,
+            core_2.CheckboxCMP,
+            core_3.WordCountPipe
         ]
     }),
     __metadata("design:paramtypes", [])
-], AppMD);
-exports.AppMD = AppMD;
+], NGFormsModule);
+exports.NGFormsModule = NGFormsModule;

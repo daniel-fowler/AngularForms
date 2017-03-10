@@ -1,0 +1,2 @@
+"use strict";
+exports.html = "\n\n<span *ngIf=\"!readonly\">\n    <div [ngClass]=\"{ 'form-group' : label }\">\n        <label class=\"control-label {{ formModel.labelClass}}\"\n               *ngIf=\"label\">\n            {{ label }}\n        </label>\n\n        <div [ngClass]=\"label ? formModel.controlClass : ''\">\n            <div class=\"btn-group\">\n                <ng-content></ng-content>\n            </div>\n        </div>\n    </div>\n</span>\n\n<text [label]=\"label\"\n      *ngIf=\"readonly\">\n    {{ readonlyValue }}\n</text>\n\n\n\n";

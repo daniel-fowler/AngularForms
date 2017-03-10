@@ -9,18 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppCMP = (function () {
-    function AppCMP() {
-        this.fruit = ['Orange', 'Apple'];
-        this.selectedFruit = ['Orange'];
+var WordCountPipe = (function () {
+    function WordCountPipe() {
     }
-    return AppCMP;
+    WordCountPipe.prototype.transform = function (value) {
+        if (!value)
+            return 0;
+        var result = value.replace(' ', '');
+        var regex = /\s+/gi;
+        var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+        return wordCount;
+    };
+    return WordCountPipe;
 }());
-AppCMP = __decorate([
-    core_1.Component({
-        selector: 'app',
-        templateUrl: './src/app.html'
+WordCountPipe = __decorate([
+    core_1.Pipe({
+        name: 'wordCount'
     }),
     __metadata("design:paramtypes", [])
-], AppCMP);
-exports.AppCMP = AppCMP;
+], WordCountPipe);
+exports.WordCountPipe = WordCountPipe;
