@@ -7,5 +7,10 @@ export declare class TextboxCMP {
     value: string;
     valueChange: EventEmitter<string>;
     multiline: boolean;
+    debounceTime: number;
+    debounceInvoke: EventEmitter<any>;
+    private obs;
+    private obsv;
+    private subs;
     changeValue(val: string): void;
 }

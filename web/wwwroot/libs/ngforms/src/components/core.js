@@ -8,3 +8,5 @@ __export(require("./ngform/ngform.cmp"));
 __export(require("./text/text.cmp"));
 __export(require("./textbox/textbox.cmp"));
 __export(require("./checkbox/checkbox.cmp"));
+__export(require("./btn-save/btn-save.cmp"));
+__export(require("./ddl/ddl.cmp"));

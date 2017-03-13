@@ -36,6 +36,14 @@
                     
                     {{ selectedFruit | json }}
                 </text>
+
+                <ddl label="Drop Down List"
+                     [list]="list"
+                     [(value)]="selectedItem"></ddl>
+
+                <text label=" ">
+                    {{ selectedItem | json }}
+                </text>
             </ngform>    
         </div>
     </div>
