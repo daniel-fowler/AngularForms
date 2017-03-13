@@ -4,6 +4,8 @@ export const html = `
      *ngIf="label">
     <label class="control-label {{ formModel.labelClass }}">
         {{ label }}
+
+        <icon-required *ngIf="required"></icon-required>
     </label>
 
     <div class="{{ formModel.controlClass }}">

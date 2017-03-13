@@ -8,25 +8,30 @@
                     class-control="col-lg-10">
  
                 <textbox label="Texbox"
-                         [(value)]="textbox"></textbox>
+                         [(value)]="textbox"
+                         [required]="true"></textbox>
                 <text label=" ">{{ textbox }}</text>
  
                 <textbox label="Textbox Multiline"
                          [multiline]="true"
-                         [(value)]="textboxmulti"></textbox>
+                         [(value)]="textboxmulti"
+                         [required]="true"></textbox>
                 <text label=" ">{{textboxmulti}}</text> 
  
-                <text label="Text">Some text here.</text>
+                <text label="Text"
+                        [required]="true">Some text here.</text>
 
                 <btn-multi label="Btn Multi"
-                           [(value)]="yesno">
+                           [(value)]="yesno"
+                           [required]="true">
                     <btn [value]="true">Yes</btn>
                     <btn [value]="false">No</btn>
                 </btn-multi>
                 <text label=" ">{{ yesno | json }}</text>
                 
 
-                <text label="Checkbox">
+                <text label="Checkbox"
+                      [required]="true">
                     <div *ngFor="let item of fruit">
                         <checkbox [label]="item"
                                   [value]="item"
@@ -39,7 +44,8 @@
 
                 <ddl label="Drop Down List"
                      [list]="list"
-                     [(value)]="selectedItem"></ddl>
+                     [(value)]="selectedItem"
+                     [required]="true"></ddl>
 
                 <text label=" ">
                     {{ selectedItem | json }}

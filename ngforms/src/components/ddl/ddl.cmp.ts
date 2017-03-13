@@ -20,6 +20,7 @@ export class DDLCMP {
     @Output() valueChange: EventEmitter<any> = new EventEmitter<any>();
     
     @Output() selectedItemChange: EventEmitter<any> = new EventEmitter<any>();
+    @Input() required: boolean = false;
 
     selectedItem: any = { id: <any>null, name: <any>null };
     chooseVal: any = null;

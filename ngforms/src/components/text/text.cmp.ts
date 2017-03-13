@@ -14,4 +14,5 @@ export class TextCMP {
 
     @Input() label: string = null;
     @Input() value: string = null;
+    @Input() required: boolean = false;
 }

@@ -32,6 +32,8 @@ export class TextboxCMP
     @Input('debounce-time') debounceTime: number = 400;
     @Output('debounce-invoke') debounceInvoke: EventEmitter<any> = null;
 
+    @Input() required: boolean = false;
+
     private obs: Observable<string> = null;
     private obsv: Subscriber<string> = null;
     private subs: Subscription = null;

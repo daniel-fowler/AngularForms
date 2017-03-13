@@ -2,7 +2,10 @@ export const html = `
 
 <div class="form-group"
     *ngIf="label">
-    <label class="control-label {{ formModel.labelClass }}">{{label}}</label>
+    <label class="control-label {{ formModel.labelClass }}">
+        {{label}}
+        <icon-required *ngIf="required"></icon-required>
+    </label>
 
     <div class="{{ formModel.controlClass }}">
         <input type="text"
