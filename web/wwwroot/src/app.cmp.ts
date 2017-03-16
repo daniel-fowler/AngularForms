@@ -15,4 +15,6 @@ export class AppCMP
     ];
 
     selectedItem:any = null;
+
+    btnBoolValue:boolean = false;
 }

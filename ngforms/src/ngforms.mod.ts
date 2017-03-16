@@ -12,7 +12,8 @@ import {
     BtnSaveCMP,
     DDLCMP,
     IconRequired,
-    BtnDeleteCMP
+    BtnDeleteCMP,
+    BtnBoolCMP
 } from './components/core';
 
 import {
@@ -35,6 +36,7 @@ import {
         DDLCMP,
         IconRequired,
         BtnDeleteCMP,
+        BtnBoolCMP,
 
         WordCountPipe
     ],
@@ -49,6 +51,7 @@ import {
         DDLCMP,
         IconRequired,
         BtnDeleteCMP,
+        BtnBoolCMP,
 
         WordCountPipe
     ]

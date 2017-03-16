@@ -3,4 +3,5 @@ export declare class AppCMP {
     selectedFruit: string[];
     list: any[];
     selectedItem: any;
+    btnBoolValue: boolean;
 }

@@ -7,3 +7,5 @@ export * from './checkbox/checkbox.cmp';
 export * from './btn-save/btn-save.cmp';
 export * from './ddl/ddl.cmp';
 export * from './icon-required/icon-required.cmp';
+export * from './btn-delete/btn-delete.cmp';
+export * from './btn-bool/btn-bool.cmp';

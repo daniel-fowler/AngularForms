@@ -50,6 +50,13 @@
                 <text label=" ">
                     {{ selectedItem | json }}
                 </text>
+
+                <btn-bool label="Btn Bool"
+                          [required]="true"
+                          [(value)]="btnBoolValue">
+                </btn-bool>
+
+                {{ btnBoolValue }}
             </ngform>    
         </div>
     </div>

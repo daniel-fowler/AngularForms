@@ -19,6 +19,7 @@ var AppCMP = (function () {
             { id: 3, name: "Item 3" },
         ];
         this.selectedItem = null;
+        this.btnBoolValue = false;
     }
     return AppCMP;
 }());

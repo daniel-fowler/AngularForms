@@ -1,0 +1,2 @@
+"use strict";
+exports.html = "\n\n    <button class=\"btn btn-danger\"\n            type=\"button\"\n            [disabled]=\"!isEnabled || isDeleting\"\n            (click)=\"click($event)\">\n        <i class=\"fa fa-trash\"\n        *ngIf=\"!isDeleting && !isError && !isSuccess\"></i>\n\n        <i class=\"fa fa-check\"\n        *ngIf=\"!isDeleting && isSuccess\"></i>\n\n        <i class=\"fa fa-check\"\n        *ngIf=\"!isDeleting && isError\"></i>\n\n        <i class=\"fa fa-spinner fa-pulse\"\n        *ngIf=\"isDeleting\"></i>\n    </button>\n\n";
