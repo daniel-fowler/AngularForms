@@ -34,6 +34,7 @@ NGFormsModule = __decorate([
             core_2.BtnSaveCMP,
             core_2.DDLCMP,
             core_2.IconRequired,
+            core_2.BtnDeleteCMP,
             core_3.WordCountPipe
         ],
         declarations: [
@@ -46,6 +47,7 @@ NGFormsModule = __decorate([
             core_2.BtnSaveCMP,
             core_2.DDLCMP,
             core_2.IconRequired,
+            core_2.BtnDeleteCMP,
             core_3.WordCountPipe
         ]
     }),

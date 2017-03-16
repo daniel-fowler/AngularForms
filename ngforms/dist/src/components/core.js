@@ -11,3 +11,4 @@ __export(require("./checkbox/checkbox.cmp"));
 __export(require("./btn-save/btn-save.cmp"));
 __export(require("./ddl/ddl.cmp"));
 __export(require("./icon-required/icon-required.cmp"));
+__export(require("./btn-delete/btn-delete.cmp"));

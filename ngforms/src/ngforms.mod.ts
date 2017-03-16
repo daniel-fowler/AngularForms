@@ -11,7 +11,8 @@ import {
     CheckboxCMP,
     BtnSaveCMP,
     DDLCMP,
-    IconRequired
+    IconRequired,
+    BtnDeleteCMP
 } from './components/core';
 
 import {
@@ -33,6 +34,7 @@ import {
         BtnSaveCMP,
         DDLCMP,
         IconRequired,
+        BtnDeleteCMP,
 
         WordCountPipe
     ],
@@ -46,6 +48,7 @@ import {
         BtnSaveCMP,
         DDLCMP,
         IconRequired,
+        BtnDeleteCMP,
 
         WordCountPipe
     ]
