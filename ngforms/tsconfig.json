@@ -10,6 +10,7 @@
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
         "outDir": "./dist",
+        // "outDir": "../web/wwwroot/libs/ngforms",
         "declaration": true
     },
     "exclude":[

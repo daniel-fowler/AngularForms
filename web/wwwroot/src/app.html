@@ -35,11 +35,18 @@
                     <div *ngFor="let item of fruit">
                         <checkbox [label]="item"
                                   [value]="item"
-                                  [selected]="selectedFruit">
+                                  [checked]="selectedFruit">
                         </checkbox>              
                     </div>
                     
                     {{ selectedFruit | json }}
+                </text>
+
+                <text label="Checkbox bool">
+                    <checkbox label="Is Checked:"
+                              [(checked)]="isChecked"></checkbox>
+
+                    {{ isChecked }}
                 </text>
 
                 <ddl label="Drop Down List"

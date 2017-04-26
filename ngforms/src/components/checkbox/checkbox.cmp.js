@@ -36,19 +36,20 @@ var CheckboxCMP = (function () {
     });
     ;
     CheckboxCMP.prototype.onCBChange = function (event) {
+        console.log('onCBChange()');
+        console.log('checked: ', this.checked);
         if (this.checked === null)
             return;
         var cb = event.target;
         var isChecked = cb.checked;
-        if (this.checked && this.checked.constructor === Array) {
-            var itemId = cb.value;
+        if (this.checked.constructor === Array) {
+            var itemId = cb.values;
             if (isChecked
                 && !this.isChecked)
-                this.checked.push(itemId);
+                this.selected.push(itemId);
             else if (!isChecked
                 && this.isChecked)
                 this.checked.splice(this.checked.indexOf(itemId), 1);
-            return;
         }
         this.checked = isChecked;
         this.checkedChange.emit(this.checked);
@@ -68,7 +69,7 @@ __decorate([
     __metadata("design:type", Object)
 ], CheckboxCMP.prototype, "checked", void 0);
 __decorate([
-    core_1.Output(),
+    core_1.Input(),
     __metadata("design:type", core_1.EventEmitter)
 ], CheckboxCMP.prototype, "checkedChange", void 0);
 __decorate([

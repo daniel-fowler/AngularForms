@@ -1,4 +1,4 @@
-import {Component, Input, ElementRef} from '@angular/core';
+import {Component, Input, Output, ElementRef, EventEmitter} from '@angular/core';
 
 import {html} from './checkbox.html';
 
@@ -8,14 +8,20 @@ import {html} from './checkbox.html';
 })
 
 export class CheckboxCMP {
-    @Input() value: string;
     @Input() label: string;
-    @Input() selected: Array<string>;
+    @Input() value: any;
+    @Input() checked: any = null;
+    @Output() checkedChange: EventEmitter<any> = new EventEmitter<any>();
     @Input() readonly: boolean = false;
 
-    get isSelected() {
+    @Input() set selected(val:any) { this.checked = val  } //Deprecated
+
+    get isChecked() : boolean {
         var $checkbox = $("#chk", this.elRef.nativeElement);
-        return this.selected && this.selected.find(id => id == $checkbox.val()) != undefined;
+        return this.checked === true
+               || (this.checked
+                    && this.checked.constructor === Array 
+                    && (<Array<any>>this.checked).find(id => id == $checkbox.val()) != undefined);
     };
 
     constructor(protected elRef: ElementRef) {
@@ -23,18 +29,27 @@ export class CheckboxCMP {
     }
 
     onCBChange(event: any) {
-        if(!this.selected)
+        if(this.checked === null)
             return; 
-            
+
         var cb = event.target;
         var isChecked = cb.checked;
-        var itemId = cb.value;
 
-        if (isChecked
-            && !this.isSelected)
-            this.selected.push(itemId);
-        else if (!isChecked
-            && this.isSelected)
-            this.selected.splice(this.selected.indexOf(itemId), 1);
+        if(this.checked && this.checked.constructor === Array)
+        {
+            var itemId = cb.value;
+
+            if (isChecked
+                && !this.isChecked)
+                this.checked.push(itemId);
+            else if (!isChecked
+                && this.isChecked)
+                this.checked.splice(this.checked.indexOf(itemId), 1);
+
+            return;
+        }            
+
+        this.checked = isChecked;
+        this.checkedChange.emit(this.checked);
     }
 }
