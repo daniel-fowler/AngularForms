@@ -29,9 +29,6 @@ export class CheckboxCMP {
     }
 
     onCBChange(event: any) {
-        if(this.checked === null)
-            return; 
-
         var cb = event.target;
         var isChecked = cb.checked;
 

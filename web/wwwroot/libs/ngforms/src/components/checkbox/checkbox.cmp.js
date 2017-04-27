@@ -36,8 +36,6 @@ var CheckboxCMP = (function () {
     });
     ;
     CheckboxCMP.prototype.onCBChange = function (event) {
-        if (this.checked === null)
-            return;
         var cb = event.target;
         var isChecked = cb.checked;
         if (this.checked && this.checked.constructor === Array) {
