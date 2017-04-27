@@ -7,6 +7,7 @@ export declare class TextboxCMP {
     value: string;
     valueChange: EventEmitter<string>;
     multiline: boolean;
+    password: boolean;
     debounceTime: number;
     debounceInvoke: EventEmitter<any>;
     required: boolean;

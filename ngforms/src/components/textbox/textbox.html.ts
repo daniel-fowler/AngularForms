@@ -8,7 +8,7 @@ export const html = `
     </label>
 
     <div class="{{ formModel.controlClass }}">
-        <input type="text"
+        <input [type]="password ? 'password' : 'text'"
                 *ngIf="!multiline"
                 class="form-control"
                 [ngModel]="value"

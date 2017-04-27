@@ -28,6 +28,7 @@ export class TextboxCMP
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
     @Input() multiline: boolean = false;
+    @Input() password: boolean = false;
 
     @Input('debounce-time') debounceTime: number = 400;
     @Output('debounce-invoke') debounceInvoke: EventEmitter<any> = null;

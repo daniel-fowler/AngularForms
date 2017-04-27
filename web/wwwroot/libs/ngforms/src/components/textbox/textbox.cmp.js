@@ -20,6 +20,7 @@ var TextboxCMP = (function () {
         this.value = null;
         this.valueChange = new core_1.EventEmitter();
         this.multiline = false;
+        this.password = false;
         this.debounceTime = 400;
         this.debounceInvoke = null;
         this.required = false;
@@ -58,6 +59,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Boolean)
 ], TextboxCMP.prototype, "multiline", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], TextboxCMP.prototype, "password", void 0);
 __decorate([
     core_1.Input('debounce-time'),
     __metadata("design:type", Number)
