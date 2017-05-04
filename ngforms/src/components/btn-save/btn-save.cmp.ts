@@ -16,7 +16,6 @@ export class BtnSaveCMP {
     @Input() enabled: boolean = true;
     @Input() text:string = 'Save';
     @Input() savingText: string = 'Saving...';
-    @Input() savedText: string = 'Saved!';
     @Input() content: boolean = false;
     @Input() set saving(val:boolean) { this.isSaving = val };
 
@@ -59,7 +58,6 @@ export class BtnSaveCMP {
     }
 
     onSuccess() {
-        this.text = this.savedText;
         this.isSaving = false;
 
         if(this.save)
