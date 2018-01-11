@@ -1,14 +1,14 @@
 {
   "name": "ngforms",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "NGForms is a simple little angular 2 module that allows you to write HTML forms without the verbosity of bootstrap 3.",
   "repository": "https://github.com/daniel-fowler/NGForms",
   "dependencies": {
-    "@angular/core": "^2.4.1",
-    "@angular/forms": "^2.4.1",
-    "@angular/platform-browser": "^2.4.1",
-    "@angular/common": "^2.4.1",
-    "rxjs": "^5.0.3"
+    "@angular/core": ">=2.4.1",
+    "@angular/forms": ">=2.4.1",
+    "@angular/platform-browser": ">=2.4.1",
+    "@angular/common": ">=2.4.1",
+    "rxjs": ">=5.0.3"
   },
   "files": [
     "dist/"
