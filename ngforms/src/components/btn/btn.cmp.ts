@@ -1,4 +1,4 @@
-import {Component, Input, HostBinding, HostListener, Optional} from '@angular/core';
+import {Component, Input, HostBinding, HostListener, Optional, Output, EventEmitter} from '@angular/core';
 
 import {BtnMultiCMP} from '../btn-multi/btn-multi.cmp';
 import {html} from './btn.html';
@@ -13,9 +13,10 @@ export class BtnCMP {
     constructor(public formModel:FormModel,
                 @Optional() protected btnMulti?: BtnMultiCMP) {
     }
-
+    
+    @HostBinding('attr.disabled') get disabled() { return this.busy ? true : null; }
+    @HostBinding('style.pointer-events') get pointerEvents(){ return this.busy ? 'none': 'all'; }
     @HostBinding('class') get test() { return 'btn ' + this.class }
-    @HostListener('click') onClicked = this.click;
 
     @Input() value: any = null;
     @Input() busy: boolean = false;
@@ -44,7 +45,11 @@ export class BtnCMP {
                && this.value === this.btnMulti.value;
     }
 
-    click() {
+    @HostListener('click')
+    onClick() {
+        if(this.busy)
+            return;
+
         if (this.btnMulti)
             this.btnMulti.changeValue(this.value);
     }

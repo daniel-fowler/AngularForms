@@ -5,8 +5,8 @@ export const html = `
            [value]="value"
            [checked]="isChecked"
            (change)="onCBChange($event)"/>
-
     {{ label }}
+    <ng-content></ng-content>
 </label>
 
 `;

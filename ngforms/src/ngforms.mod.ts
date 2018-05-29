@@ -20,6 +20,8 @@ import {
     WordCountPipe
  } from './pipes/core';
 
+import { FormModel } from './components/ngform/formModel';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -54,6 +56,9 @@ import {
         BtnBoolCMP,
 
         WordCountPipe
+    ],
+    providers: [
+        FormModel
     ]
 })
 export class NGFormsModule {
