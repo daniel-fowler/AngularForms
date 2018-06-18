@@ -13,7 +13,8 @@ import {
     DDLCMP,
     IconRequired,
     BtnDeleteCMP,
-    BtnBoolCMP
+    BtnBoolCMP,
+    MoneyboxCMP
 } from './components/core';
 
 import {
@@ -39,6 +40,7 @@ import { FormModel } from './components/ngform/formModel';
         IconRequired,
         BtnDeleteCMP,
         BtnBoolCMP,
+        MoneyboxCMP,
 
         WordCountPipe
     ],
@@ -54,6 +56,7 @@ import { FormModel } from './components/ngform/formModel';
         IconRequired,
         BtnDeleteCMP,
         BtnBoolCMP,
+        MoneyboxCMP,
 
         WordCountPipe
     ],
