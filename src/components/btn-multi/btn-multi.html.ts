@@ -18,10 +18,11 @@ export const html = `
 </span>
 
 <text [label]="label"
-      *ngIf="readonly">
-    {{ readonlyValue }}
+      *ngIf="readonly && label">
+    {{ readonlyValue || value }}
 </text>
 
-
-
+<span *ngIf="readonly && !label">
+    {{ readonlyValue || value }}
+</span>
 `;

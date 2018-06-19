@@ -1,6 +1,6 @@
 export const html:string = `
 
-<div class="form-group" *ngIf="label">
+<div class="form-group" *ngIf="label && !readonly">
     <label class="control-label {{ formModel.labelClass }}">
         {{ label }}
 
@@ -22,7 +22,7 @@ export const html:string = `
     </div>
 </div>
 
-<div *ngIf="!label">
+<div *ngIf="!label && !readonly">
     <select class="form-control"
             [ngModel]="value"
             (change)="onValueChanged($event.srcElement.value)"
@@ -35,5 +35,15 @@ export const html:string = `
         </option>
     </select>
 </div>
+
+<text [label]="label"
+      [required]="required"
+      *ngIf="readonly && label">
+    {{ selectedItem.name }}
+</text>
+
+<span *ngIf="readonly && !label">
+    {{ selectedItem.name }}
+</span>
 
 `;

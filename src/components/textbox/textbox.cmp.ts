@@ -34,6 +34,7 @@ export class TextboxCMP
     @Output('debounce-invoke') debounceInvoke: EventEmitter<any> = null;
 
     @Input() required: boolean = false;
+    @Input() readonly: boolean = false;
 
     private obs: Observable<string> = null;
     private obsv: Subscriber<string> = null;
