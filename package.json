@@ -1,6 +1,6 @@
 {
   "name": "ngforms",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "NGForms is a simple little angular 2 module that allows you to write HTML forms without the verbosity of bootstrap 3.",
   "repository": "https://github.com/daniel-fowler/NGForms",
   "dependencies": {
