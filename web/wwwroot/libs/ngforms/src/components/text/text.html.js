@@ -1,2 +1,0 @@
-"use strict";
-exports.html = "\n\n<div class=\"form-group\"\n     *ngIf=\"label\">\n    <label class=\"control-label {{ formModel.labelClass }}\">\n        {{ label }}\n\n        <icon-required *ngIf=\"required\"></icon-required>\n    </label>\n\n    <div class=\"{{ formModel.controlClass }}\">\n        <div class=\"form-control-static\">\n            {{ value }}\n            <ng-content></ng-content>\n        </div>\n    </div>\n</div>\n\n<span *ngIf=\"!label\">\n    {{ value }}\n</span>\n\n";
