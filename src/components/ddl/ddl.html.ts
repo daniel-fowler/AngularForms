@@ -10,7 +10,7 @@ export const html:string = `
     <div class="{{ formModel.controlClass }}">
         <select class="form-control"
                 [ngModel]="value"
-                (change)="onValueChanged($event.srcElement.value)"
+                (change)="onValueChanged($event)"
                 *ngIf="list">
             <option [value]="chooseVal">{{ chooseText }}</option>
 
@@ -25,7 +25,7 @@ export const html:string = `
 <div *ngIf="!label && !readonly">
     <select class="form-control"
             [ngModel]="value"
-            (change)="onValueChanged($event.srcElement.value)"
+            (change)="onValueChanged($event)"
             *ngIf="list">
         <option [value]="chooseVal">{{ chooseText }}</option>
 

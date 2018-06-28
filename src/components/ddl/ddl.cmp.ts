@@ -33,7 +33,9 @@ export class DDLCMP {
 
     }
 
-    onValueChanged(value: any) {
+    onValueChanged(event: any) {
+        let value = event.target.value;
+
         this.value = value;
         this.valueChange.emit(value);
         this.syncSelectedItem();
