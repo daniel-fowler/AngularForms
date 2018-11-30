@@ -42,6 +42,9 @@ export class TextboxCMP
 
     changeValue(val:string)
     {
+        if(!val)
+            val = null;
+
         this.value = val;
         this.valueChange.emit(this.value);
         this.obsv.next(this.value);
