@@ -23,7 +23,7 @@ export class MoneyboxCMP
     }
 
     @Input() label:string = null;    
-
+    @Input() placeholder:string = null;
     @Input() value: string = null;
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
