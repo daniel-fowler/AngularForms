@@ -36,6 +36,8 @@ export class TextboxCMP
     @Input() required: boolean = false;
     @Input() readonly: boolean = false;
 
+    @Input() placeholder:string = null;
+
     private obs: Observable<string> = null;
     private obsv: Subscriber<string> = null;
     private subs: Subscription = null;

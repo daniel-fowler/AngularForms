@@ -12,6 +12,7 @@ export const html = `
                 *ngIf="!multiline"
                 class="form-control"
                 [ngModel]="value"
+                [placeholder]="placeholder"
                 (ngModelChange)="changeValue($event)"/>
 
         <textarea *ngIf="multiline"
@@ -30,6 +31,7 @@ export const html = `
     <input type="text"
             *ngIf="!multiline"
             [ngModel]="value"
+            [placeholder]="placeholder"
             (ngModelChange)="changeValue($event)" 
             class="form-control" />
 
