@@ -9,4 +9,13 @@ export const html = `
     <ng-content></ng-content>
 </label>
 
+<label *ngIf="readonly">
+    <input id="chk" type="checkbox"
+           [value]="value"
+           [checked]="isChecked"
+           disabled/>
+    {{ label }}
+    <ng-content></ng-content>
+</label>
+
 `;
