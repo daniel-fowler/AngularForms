@@ -38,6 +38,8 @@ export class TextboxCMP
 
     @Input() placeholder:string = null;
 
+    @Input() error:boolean = false;
+
     private obs: Observable<string> = null;
     private obsv: Subscriber<string> = null;
     private subs: Subscription = null;

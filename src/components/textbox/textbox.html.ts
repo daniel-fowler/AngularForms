@@ -1,5 +1,4 @@
 export const html = `
-
 <div class="form-group"
     *ngIf="label && !readonly">
     <label class="control-label {{ formModel.labelClass }}">
@@ -10,10 +9,13 @@ export const html = `
     <div class="{{ formModel.controlClass }}">
         <input [type]="password ? 'password' : 'text'"
                 *ngIf="!multiline"
-                class="form-control"
+                [ngClass]="{ 'form-control': true, 'error': error }"
+                style="width:90%; display: inline-block;"
                 [ngModel]="value"
                 [placeholder]="placeholder || ''"
-                (ngModelChange)="changeValue($event)"/>
+                (ngModelChange)="changeValue($event)" />
+
+        <ng-content *ngIf="error" select="[error]" style="display:inline-block;"></ng-content>
 
         <textarea *ngIf="multiline"
                     class="form-control"
