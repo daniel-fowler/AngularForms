@@ -9,13 +9,14 @@ export const html = `
     <div class="{{ formModel.controlClass }}">
         <input [type]="password ? 'password' : 'text'"
                 *ngIf="!multiline"
-                [ngClass]="{ 'form-control': true, 'error': error }"
+                [ngClass]="{ 'form-control': true, 'error': validator && validator.hasErrors }"
                 style="width:90%; display: inline-block;"
                 [ngModel]="value"
                 [placeholder]="placeholder || ''"
-                (ngModelChange)="changeValue($event)" />
+                (ngModelChange)="changeValue($event)"
+                (focusout)="onFocusout()" />
 
-        <ng-content *ngIf="error" select="[error]" style="display:inline-block;"></ng-content>
+        <ng-content *ngIf="validator && validator.hasErrors" select="[error]" style="display:inline-block;"></ng-content>
 
         <textarea *ngIf="multiline"
                     class="form-control"
@@ -35,8 +36,11 @@ export const html = `
             [ngModel]="value"
             [placeholder]="placeholder || ''"
             (ngModelChange)="changeValue($event)" 
-            class="form-control" />
+            [ngClass]="{ 'form-control': true, 'error': validator && validator.hasErrors }"
+            (focusout)="onFocusout()" />
 
+    <ng-content *ngIf="validator && validator.hasErrors" select="[error]" style="display:inline-block;"></ng-content>
+    
     <textarea *ngIf="multiline"
                 rows="10"
                 [ngModel]="value"

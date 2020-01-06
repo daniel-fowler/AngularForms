@@ -2,14 +2,18 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Observable, Subscriber, Subscription} from 'rxjs/Rx';
 import {FormModel} from '../ngform/formModel';
 import {html} from './textbox.html';
+import { ValidationModel } from "../ngform/validationModel";
+import { IValidator } from "../ngform/iValidator";
 
 @Component({
     selector: 'textbox',
-    template: html
+    template: html,
+    providers: [ValidationModel]
 })
 export class TextboxCMP
 {
-    constructor(public formModel:FormModel)
+    constructor(public formModel:FormModel,
+                private validationModel: ValidationModel)
     {
         this.debounceInvoke = new EventEmitter<string>();
 
@@ -26,6 +30,20 @@ export class TextboxCMP
 
     @Input() value: string = null;
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
+
+    //Validator
+        private _validator:IValidator;
+    
+        @Input() set validator(value: IValidator)
+        {
+            this._validator = value;
+            this.validationModel.validator = value;
+        }
+
+        get validator()
+        {
+            return this._validator;
+        }
 
     @Input() multiline: boolean = false;
     @Input() password: boolean = false;
@@ -52,5 +70,11 @@ export class TextboxCMP
         this.value = val;
         this.valueChange.emit(this.value);
         this.obsv.next(this.value);
+    }
+
+    onFocusout()
+    {
+        if(this.validator)
+            this.validator.validate();
     }
 }

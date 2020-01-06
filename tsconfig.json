@@ -9,7 +9,7 @@
         "removeComments": false,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
-        "outDir": "./dist",
+        "outDir": "C:\\Users\\Daniel Fowler\\Projects\\IDCS_GIT\\AC.Transportal\\Presentation\\wwwroot\\UI\\node_modules\\ngforms\\dist",
         "declaration": true
     },
     "exclude":[
