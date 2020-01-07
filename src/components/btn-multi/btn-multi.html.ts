@@ -10,9 +10,11 @@ export const html = `
         </label>
 
         <div [ngClass]="label ? formModel.controlClass : ''">
-            <div class="btn-group">
+            <div [ngClass]="{ 'btn-group': true, 'error': validator && validator.hasErrors }">
                 <ng-content></ng-content>
             </div>
+
+            <ng-content *ngIf="validator && validator.hasErrors" select="[error]" style="display:inline-block;"></ng-content>
         </div>
     </div>
 </span>
