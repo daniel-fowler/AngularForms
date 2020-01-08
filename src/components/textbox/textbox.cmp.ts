@@ -17,6 +17,15 @@ export class TextboxCMP
     {
         this.debounceInvoke = new EventEmitter<string>();
 
+        this.validatorObs = new Observable<string>((obsv: Subscriber<string>) => this.validatorObsv = obsv);
+        this.validatorSub = this.validatorObs
+                                .debounceTime(1000)
+                                .do(text => {
+                                    if(this.validator)
+                                        this.validator.validate();
+                                })
+                                .subscribe(null, null, () => true);
+
         this.obs = new Observable<string>((obsv: Subscriber<string>) => this.obsv = obsv);
         this.subs = this.obs
                         .debounceTime(this.debounceTime)
@@ -28,7 +37,20 @@ export class TextboxCMP
 
     @Input() label:string = null;    
 
-    @Input() value: string = null;
+    private _value:string = null;
+    @Input() set value(val: string){
+        var valueChanged = val != this._value;
+
+        this._value = val;
+
+        if(valueChanged)
+            this.validatorObsv.next(val);
+    }
+    get value()
+    {
+        return this._value;
+    }
+
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
     //Validator
@@ -61,6 +83,10 @@ export class TextboxCMP
     private obs: Observable<string> = null;
     private obsv: Subscriber<string> = null;
     private subs: Subscription = null;
+
+    private validatorObs: Observable<string> = null;
+    private validatorObsv: Subscriber<string> = null;
+    private validatorSub: Subscription = null;
 
     changeValue(val:string)
     {
