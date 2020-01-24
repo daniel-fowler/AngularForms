@@ -35,7 +35,8 @@ export class TextboxCMP
                         .subscribe(null, null, () => true);
     }
 
-    @Input() label:string = null;    
+    @Input() label:string = null;
+    @Input() type:string = "text";
 
     private _value:string = null;
     @Input() set value(val: string){

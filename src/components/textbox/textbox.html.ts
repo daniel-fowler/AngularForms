@@ -9,9 +9,9 @@ export const html = `
         {{label}}
         <icon-required *ngIf="required"></icon-required>
     </label>
-
+    
     <div class="{{ formModel.controlClass }}">
-        <input [type]="password ? 'password' : 'text'"
+        <input [type]="password ? 'password' : type"
                 *ngIf="!multiline"
                 [ngClass]="{ 'form-control': true, 'error': validator && validator.hasErrors }"
                 style="width:90%; display: inline-block;"
