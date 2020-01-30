@@ -39,11 +39,15 @@ export const html:string = `
 <text [label]="label"
       [required]="required"
       *ngIf="readonly && label">
-    {{ selectedItem.name }}
+    <span *ngIf="selectedItem">
+        {{ selectedItem.name }}
+    </span>
 </text>
 
 <span *ngIf="readonly && !label">
-    {{ selectedItem.name }}
+    <span *ngIf="selectedItem">
+        {{ selectedItem.name }}
+    </span>
 </span>
 
 `;
