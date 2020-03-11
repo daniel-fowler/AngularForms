@@ -21,7 +21,9 @@ export class TextboxCMP
         this.validatorSub = this.validatorObs
                                 .debounceTime(1000)
                                 .do(text => {
-                                    if(this.validator)
+                                    if(this.formModel 
+                                        && this.formModel.autoValidate 
+                                        && this.validator)
                                         this.validator.validate();
                                 })
                                 .subscribe(null, null, () => true);
@@ -101,7 +103,9 @@ export class TextboxCMP
 
     onFocusout()
     {
-        if(this.validator)
+        if(this.formModel
+            && this.formModel.autoValidate 
+            && this.validator)
             this.validator.validate();
     }
 }
