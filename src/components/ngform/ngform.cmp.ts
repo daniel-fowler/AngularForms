@@ -19,4 +19,5 @@ export class FormCMP
 
     @Input('class-label') set classLabel(val:string) { this.formModel.labelClass = val; }
     @Input('class-control') set classControl(val:string) { this.formModel.controlClass = val; }
+    @Input('autoValidate') set autoValidate(val:boolean) { this.formModel.autoValidate = val; }
 }
