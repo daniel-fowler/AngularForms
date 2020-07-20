@@ -25,6 +25,7 @@ export class MoneyboxCMP
     @Input() label:string = null;    
     @Input() placeholder:string = null;
     @Input() value: string = null;
+    @Input() readonly:boolean = false;
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
     @Input('debounce-time') debounceTime: number = 400;

@@ -1,7 +1,7 @@
 export const html = `
 
 <div class="form-group"
-    *ngIf="label">
+    *ngIf="!readonly && label">
     <label class="control-label {{ formModel.labelClass }}">
         {{label}}
         <icon-required *ngIf="required"></icon-required>
@@ -24,7 +24,7 @@ export const html = `
     </div>
 </div>
 
-<span *ngIf="!label">
+<span *ngIf="!readonly && !label">
     <div class="input-group">
         <span class="input-group-addon">£</span>
 
@@ -36,5 +36,15 @@ export const html = `
                 class="form-control text-right"
                 style="width: 130px" />
     </div>
+</span>
+
+<text [label]="label"
+      [required]="required"
+      *ngIf="readonly && label">
+    {{ value }}
+</text>
+
+<span *ngIf="readonly && !label">
+    {{ value }}
 </span>
 `;
