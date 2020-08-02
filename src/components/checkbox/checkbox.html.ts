@@ -1,19 +1,12 @@
 export const html = `
 
-<label *ngIf="!readonly">
-    <input id="chk" type="checkbox"
-           [value]="value"
-           [checked]="isChecked"
-           (change)="onCBChange($event)"/>
-    {{ label }}
-    <ng-content></ng-content>
-</label>
-
 <label *ngIf="readonly">
-    <input id="chk" type="checkbox"
+    <input id="chk" 
+           type="checkbox"
            [value]="value"
            [checked]="isChecked"
-           disabled/>
+           (change)="onCBChange($event)"
+           [disabled]="readonly" />
     {{ label }}
     <ng-content></ng-content>
 </label>
