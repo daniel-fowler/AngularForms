@@ -1,6 +1,6 @@
 export const html = `
 
-<label *ngIf="readonly">
+<label>
     <input id="chk" 
            type="checkbox"
            [value]="value"
